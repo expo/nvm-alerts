@@ -8,8 +8,8 @@ async function sendSlackWebhookMessageAsync(opts) {
   var s = new slackNode();
   s.setWebhook(config.slack.webhookUrl);
   var defaults = {
-    //channel: '#metadevelopment',
-    channel: '#general',
+    channel: '#metadevelopment',
+    //channel: '#general',
     username: 'exp.host',
     text: 'Test ' + Date.now(),
     icon_emoji: ':new:',
@@ -20,7 +20,7 @@ async function sendSlackWebhookMessageAsync(opts) {
 
 async function sendNewIojsVersionMessageAsync(version) {
   return await sendSlackWebhookMessageAsync({
-    text: "There's a new version of iojs available: " + version.format() + "\nGet it with `nvm`",
+    text: "There's a new version of iojs available: " + version.format() + "\nGet it with:\n`nvm install iojs`\n(nvm is available at: https://github.com/creationix/nvm )",
   });
 };
 
