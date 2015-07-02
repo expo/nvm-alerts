@@ -8,8 +8,8 @@ async function sendSlackWebhookMessageAsync(opts) {
   var s = new slackNode();
   s.setWebhook(config.slack.webhookUrl);
   var defaults = {
-    channel: '#metadevelopment',
-    //channel: '#general',
+    //channel: '#metadevelopment',
+    channel: '#general',
     username: 'exp.host',
     text: 'Test ' + Date.now(),
     icon_emoji: ':new:',

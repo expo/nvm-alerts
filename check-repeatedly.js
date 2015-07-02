@@ -8,4 +8,4 @@ setInterval(function () {
   }, function (err) {
     console.error("*ERR* Failed to check for new iojs version:", err, "\n" + err.stack);
   });
-}, timeconstants.minute * 2);
+}, timeconstants.minute * 5);
