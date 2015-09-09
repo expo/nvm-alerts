@@ -11,10 +11,10 @@ import versions from './versions';
 async function pollVersionAsync() {
   let {isNew, version} = await versions.checkVersionAsync();
   if (isNew) {
-    console.log(`There is a new version of iojs:`, version.format());
+    console.log(`There is a new version of Node:`, version.format());
     await slack.sendNewNodeVersionMessageAsync(version);
   } else {
-    console.log(`Already on the latest version of iojs:`, version.format());
+    console.log(`Already on the latest version of Node:`, version.format());
   }
   return {isNew, version};
 }
