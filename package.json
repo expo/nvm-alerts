@@ -1,19 +1,16 @@
 {
   "name": "nvm-alerts",
-  "version": "0.0.1",
-  "description": "Polls nvm for new versions of iojs",
+  "version": "0.0.2",
+  "description": "Polls nvm for new versions of Node.js",
   "main": "build/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-    "check-for-iojs-updates": "check.js"
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/exponentjs/nvm-alerts.git"
   },
-  "author": "exponent.team@gmail.com",
+  "author": "support@exponentjs.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/exponentjs/nvm-alerts/issues"
@@ -29,6 +26,9 @@
     "semver": "^4.3.6",
     "slack-node": "^0.1.3",
     "timeconstants": "^1.0.1"
+  },
+  "optionalDependencies": {
+    "@exponent/secret": "exponentjs/exponent-secret"
   },
   "devDependencies": {
     "@exponent/gulp-babel": "^7.0.0",
