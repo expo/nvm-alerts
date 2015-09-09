@@ -1,0 +1,25 @@
+{
+  apps: [{
+    name: 'nvm-alerts',
+    script: '.',
+    env_production: {
+      NODE_ENV: 'production',
+    },
+  }],
+  deploy: {
+    production: {
+      user: 'exponent',
+      host: 'exponentjs.com',
+      key: 'node_modules/@exponent/secret/exp-host.pem',
+      ref: 'origin/master',
+      repo: 'https://github.com/exponentjs/nvm-alerts.git',
+      path: '/home/exponent/nvm-alerts',
+      'post-deploy': [
+        'npm install',
+        'gulp clean',
+        'gulp build',
+        'pm2 startOrRestart ecosystem.json --env production',
+      ].join(' && '),
+    },
+  },
+}

@@ -4,7 +4,8 @@
   "description": "Polls nvm for new versions of Node.js",
   "main": "build",
   "scripts": {
-    "start": "node build"
+    "start": "node build",
+    "deploy": "pm2 deploy ecosystem.json production"
   },
   "engines": {
     "node": ">=4"
