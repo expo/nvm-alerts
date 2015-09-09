@@ -1,31 +1,31 @@
-var _ = require('lodash-node');
-var instapromise = require('instapromise');
-var slackNode = require('slack-node');
+'use strict';
 
-var config = require('./config');
+import 'instapromise';
 
-async function sendSlackWebhookMessageAsync(opts) {
-  var s = new slackNode();
-  s.setWebhook(config.slack.webhookUrl);
-  var defaults = {
-    //channel: '#metadevelopment',
+import Slack from 'slack-node';
+
+import config from './config';
+
+function sendSlackWebhookMessageAsync(options) {
+  let slack = new Slack();
+  slack.setWebhook(config.slack.webhookUrl);
+  return slack.promise.webhook({
     channel: '#general',
     username: 'exp.host',
-    text: 'Test ' + Date.now(),
     icon_emoji: ':new:',
-  };
-  opts = _.assign(defaults, opts);
-  return s.promise.webhook(opts);
-};
-
-async function sendNewIojsVersionMessageAsync(version) {
-  return await sendSlackWebhookMessageAsync({
-    text: "There's a new version of iojs available: " + version.format() + "\nGet it with:\n`nvm install iojs`\n(nvm is available at: https://github.com/creationix/nvm )",
+    ...options,
   });
-};
+}
 
+async function sendNewNodeVersionMessageAsync(version) {
+  return await sendSlackWebhookMessageAsync({
+    text: `There's a new version of Node.js available: ${version.format()}\n` +
+      `Get it with:\n\`nvm install iojs\`\n` +
+      `(nvm is available at: https://github.com/creationix/nvm )`,
+  });
+}
 
-module.exports = {
+export default {
   sendSlackWebhookMessageAsync,
-  sendNewIojsVersionMessageAsync,
+  sendNewNodeVersionMessageAsync,
 };

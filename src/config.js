@@ -1,22 +1,25 @@
+'use strict';
+
 import path from 'path';
+import process from 'process';
 
 const secret = requireSecret();
 
 function requireSecret() {
-  // Local configuration takes precendence
-  var secret = attemptToRequire('./secret');
+  // Local configuration takes precedence
+  let secret = attemptToRequire('./secret');
   if (secret) {
     return secret;
   }
 
-  // This is a private package used by the production host and Exponent
+  // This is a private package used by the production host
   secret = attemptToRequire('@exponent/secret');
   if (secret) {
     return secret;
   }
 
   console.warn(
-    'Create %s with your configuration secrets to set up the Exponent host',
+    'Create %s with your configuration secrets to set up nvm-alerts',
     path.relative(process.cwd(), path.join(__dirname, 'secret.js'))
   );
   return null;
@@ -37,27 +40,5 @@ export default {
   server: {
     port: 3000,
   },
-
-  rethinkdb: {
-    discovery: false,
-    servers: [
-      {host: 'exp.host', port: 28015},
-    ],
-    db: 'exp_host',
-  },
-
-  twilio: {
-    accountSid: null,
-    authToken: null,
-    appSid: null,
-    callerId: null,
-    developerPhoneNumber: null,
-  },
-
-  sendgrid: {
-    username: null,
-    password: null,
-  },
-
   ...secret,
 };
