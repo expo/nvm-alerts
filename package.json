@@ -24,10 +24,10 @@
     "@exponent/json-file": "^3.0.0",
     "babel-runtime": "^5.8.20",
     "instapromise": "^2.0.2",
-    "needle": "^0.10.0",
-    "semver": "^5.0.1",
+    "needle": "^0.11.0",
+    "semver": "^5.0.3",
     "slack-node": "^0.1.3",
-    "source-map-support": "^0.3.2",
+    "source-map-support": "^0.3.3",
     "timeconstants": "^1.0.1"
   },
   "optionalDependencies": {
@@ -35,11 +35,11 @@
   },
   "devDependencies": {
     "babel-core": "^5.8.23",
-    "babel-eslint": "^4.1.1",
-    "eslint": "^1.3.1",
+    "babel-eslint": "^4.1.5",
+    "eslint": "^1.9.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
-    "gulp-sourcemaps": "^1.5.2",
+    "gulp-sourcemaps": "^1.6.0",
     "rimraf": "^2.4.3"
   }
 }

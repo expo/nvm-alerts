@@ -1,6 +1,6 @@
 {
   apps: [{
-    name: 'nvm-alerts',
+    name: 'NVM Alerts',
     script: '.',
     env_production: {
       NODE_ENV: 'production',
@@ -18,7 +18,7 @@
         'npm install',
         'gulp clean',
         'gulp build',
-        'pm2 startOrRestart ecosystem.json --env production',
+        'pm2 startOrRestart ecosystem.json5 --env production',
       ].join(' && '),
     },
   },
