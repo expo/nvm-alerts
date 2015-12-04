@@ -5,7 +5,7 @@
   "main": "build",
   "scripts": {
     "start": "node build",
-    "deploy": "pm2 deploy ecosystem.json production"
+    "deploy": "pm2 deploy ecosystem.json5 production"
   },
   "engines": {
     "node": ">=4"
@@ -25,9 +25,9 @@
     "babel-runtime": "^5.8.20",
     "instapromise": "^2.0.2",
     "needle": "^0.11.0",
-    "semver": "^5.0.3",
+    "semver": "^5.1.0",
     "slack-node": "^0.1.3",
-    "source-map-support": "^0.3.3",
+    "source-map-support": "^0.4.0",
     "timeconstants": "^1.0.1"
   },
   "optionalDependencies": {
@@ -35,11 +35,11 @@
   },
   "devDependencies": {
     "babel-core": "^5.8.23",
-    "babel-eslint": "^4.1.5",
-    "eslint": "^1.9.0",
+    "babel-eslint": "^5.0.0-beta4",
+    "eslint": "^1.10.3",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
     "gulp-sourcemaps": "^1.6.0",
-    "rimraf": "^2.4.3"
+    "rimraf": "^2.4.4"
   }
 }
