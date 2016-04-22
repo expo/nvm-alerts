@@ -5,7 +5,8 @@
   "main": "build",
   "scripts": {
     "start": "node build",
-    "deploy": "pm2 deploy ecosystem.json5 production"
+    "deploy": "pm2 deploy ecosystem.json5 production",
+    "lint": "eslint src"
   },
   "engines": {
     "node": ">=4"
@@ -20,6 +21,9 @@
     "url": "https://github.com/exponentjs/nvm-alerts/issues"
   },
   "homepage": "https://github.com/exponentjs/nvm-alerts#readme",
+  "eslintConfig": {
+    "extends": "exponent"
+  },
   "dependencies": {
     "@exponent/json-file": "^5.0.0",
     "babel-runtime": "^6.6.1",
@@ -47,6 +51,7 @@
     "babel-plugin-transform-runtime": "^6.7.5",
     "babel-plugin-transform-strict-mode": "^6.3.13",
     "eslint": "^2.8.0",
+    "eslint-config-exponent": "^1.0.8",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-sourcemaps": "^1.6.0",
