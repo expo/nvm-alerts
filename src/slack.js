@@ -21,7 +21,7 @@ async function sendNewNodeVersionMessageAsync(version) {
   let v = 'v' + version.format();
   return await sendSlackWebhookMessageAsync({
     text: `There's a new version of Node.js available: ${version.format()}\n` +
-      `Get it with:\n\`nvm install ${v}; nvm alias default ${v}\`\n` +
+      `Get it with:\n\`nvm install ${v} --reinstall-packages-from=default; nvm alias default ${v}\`\n` +
       `(nvm is available at: https://github.com/creationix/nvm )\n` +
       `Changelog: https://github.com/nodejs/node/blob/${v}/CHANGELOG.md`,
   });

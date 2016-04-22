@@ -1,25 +1,13 @@
 {
-  "whitelist": [
-    "asyncToGenerator",
-    "es6.blockScoping",
-    "es6.constants",
-    "es6.destructuring",
-    "es6.modules",
-    "es6.objectSuper",
-    "es6.regex.sticky",
-    "es6.regex.unicode",
-    "es6.spread",
-    "es6.tailCall",
-    "es7.asyncFunctions",
-    "es7.classProperties",
-    "es7.comprehensions",
-    "es7.decorators",
-    "es7.doExpressions",
-    "es7.exponentiationOperator",
-    "es7.exportExtensions",
-    "es7.functionBind",
-    "es7.objectRestSpread",
-    "es7.trailingFunctionCommas",
-    "runtime"
-  ]
+  "plugins": [
+    "syntax-trailing-function-commas",
+    "transform-async-to-generator",
+    "transform-es2015-destructuring",
+    "transform-es2015-modules-commonjs",
+    "transform-es2015-parameters",
+    "transform-flow-strip-types",
+    "transform-object-rest-spread",
+    "transform-runtime",
+    "transform-strict-mode",
+  ],
 }

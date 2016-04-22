@@ -2,14 +2,15 @@
 
 import 'instapromise';
 
+import JsonFile from '@exponent/json-file';
+
 import needle from 'needle';
 import path from 'path';
 import semver from 'semver';
-import jsonFile from '@exponent/json-file';
 
 const LISTING_URL = 'https://nodejs.org/dist/index.tab';
 
-let cache = jsonFile(path.join(__dirname, '_cache.json'));
+let cache = new JsonFile(path.join(__dirname, '_cache.json'));
 
 async function checkVersionAsync() {
   let latestVersion = await getLatestNodeVersionAsync();

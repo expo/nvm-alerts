@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/exponentjs/nvm-alerts#readme",
   "dependencies": {
-    "@exponent/json-file": "^3.0.0",
-    "babel-runtime": "^5.8.20",
+    "@exponent/json-file": "^5.0.0",
+    "babel-runtime": "^6.6.1",
     "instapromise": "^2.0.2",
-    "needle": "^0.11.0",
+    "needle": "^1.0.0",
     "semver": "^5.1.0",
-    "slack-node": "^0.1.3",
+    "slack-node": "^0.2.0",
     "source-map-support": "^0.4.0",
     "timeconstants": "^1.0.1"
   },
@@ -34,12 +34,22 @@
     "@exponent/secret": "exponentjs/exponent-secret"
   },
   "devDependencies": {
-    "babel-core": "^5.8.23",
-    "babel-eslint": "^5.0.0-beta4",
-    "eslint": "^1.10.3",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.1",
+    "babel-core": "^6.7.7",
+    "babel-eslint": "^6.0.3",
+    "babel-jest": "^11.0.2",
+    "babel-plugin-syntax-trailing-function-commas": "^6.3.13",
+    "babel-plugin-transform-async-to-generator": "^6.4.6",
+    "babel-plugin-transform-es2015-destructuring": "^6.4.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.7",
+    "babel-plugin-transform-es2015-parameters": "^6.4.5",
+    "babel-plugin-transform-flow-strip-types": "^6.4.0",
+    "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "babel-plugin-transform-runtime": "^6.7.5",
+    "babel-plugin-transform-strict-mode": "^6.3.13",
+    "eslint": "^2.8.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-sourcemaps": "^1.6.0",
-    "rimraf": "^2.4.4"
+    "rimraf": "^2.5.2"
   }
 }
